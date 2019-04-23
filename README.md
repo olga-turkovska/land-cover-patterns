@@ -21,7 +21,7 @@ http://mapbiomas.org/pages/database/mapbiomas_collection_download
 
 `land-cover-by-year.py` generates a CSV file with land cover overview of the specific year for selected wind parks.
 
-`find-conversions` generates a CSV file with parameters necessary for initial land cover conversion analysis.
+`find-conversions.py` generates a CSV file with parameters necessary for initial land cover conversion analysis.
 
 `figures.py` generates the figures for the poster.
 
