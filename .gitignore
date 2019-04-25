@@ -1,5 +1,3 @@
 **/.idea
 **/__pycache__
-input-data/CAATINGA.tif
-input-data/brazil
-input-data/wind_parks
+**/input-data
