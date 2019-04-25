@@ -1,3 +1,4 @@
 **/.idea
 **/__pycache__
-input-data/*
+input-data/CAATINGA.tif
+input-data/**
