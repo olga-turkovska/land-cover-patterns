@@ -14,10 +14,21 @@ Input files necessary for running the script can be easily downloaded via links 
 http://mapbiomas.org/pages/database/mapbiomas_collection_download
 
 2. Wind parks polygons -Polígono_do_Parque_Eolioelétrico_EOL- ANEEL:
-https://sigel.aneel.gov.br/Down/
+
+    2.1 Go to the webpage: https://sigel.aneel.gov.br/Down/
+    
+    2.2 Click on second button on the left
+    
+    2.3 From *Layers to Clip* select *Polígono do Parque Eolioelétrico EOL*
+    
+    2.4 Press *Execute* button at the end of the list. This will generate a link for dowloading the data
+    
+    2.5 Use the generated link to download your data
+    
+    2.6. Extract downloded files to *data-input* folder
 
 3. Data set of federal states of Brazil - BRUFE250GC_SIR - IBGE:
-https://www.ibge.gov.br/en/geosciences/territorial-organization/territorial-structure/18890-meshes.html?=&t=sobre
+ftp://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2017/Brasil/BR/br_unidades_da_federacao.zip
 
 Downloaded files need to be placed in 'input-dataset' folder.
 
