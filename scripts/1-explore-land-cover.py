@@ -15,12 +15,12 @@ def find_max(land_cover):
     return max_class, max_number, land_cover
 
 
-dataset = pd.read_csv('./data/wp_landcover_ceara.csv')
-parks = pd.read_csv('./data/ceara_wind_parks.csv')
+dataset = pd.read_csv('../output/wp_landcover_ceara.csv')
+parks = pd.read_csv('../output/ceara_wind_parks.csv')
 
-for dirs, subdirs, files in os.walk('./data/ceara/'):
+for dirs, subdirs, files in os.walk('../output/ceara/'):
     for file in files:
-        wp_raster = rasterio.open('./data/ceara/' + file)
+        wp_raster = rasterio.open('../output/ceara/' + file)
 
         file_name = file.replace('id_', '')
         wp_id = int(file_name.replace('.tif', ''))
@@ -142,5 +142,5 @@ for dirs, subdirs, files in os.walk('./data/ceara/'):
         add = dict(zip(dataset.columns.values, wp_land_cover_attrs))
         dataset = dataset.append(add, ignore_index=True)
 
-dataset.to_csv('./data/ceara_lc_overview.csv')
+dataset.to_csv('../output/ceara_lc_overview.csv')
 

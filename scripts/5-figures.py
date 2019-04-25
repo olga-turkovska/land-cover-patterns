@@ -9,7 +9,7 @@ from mapBiomas_dictionaries import code_color, code_label
 sns.set(context='poster', font='Trebuchet MS')
 
 # Figure 1 | Distribution of wind park territories amongst land cover classes in Ceara
-dataset_1 = pd.read_csv('./data/ceara_wp_area_2017.csv')
+dataset_1 = pd.read_csv('../output/ceara_wp_area_2017.csv')
 figure_1 = dataset_1.loc[:, '3':'33']
 figure_1 = figure_1.apply(lambda x: x * 994.4037219 / 1000000)
 
@@ -29,7 +29,7 @@ ax_1.set_yticklabels(list(labels_1), wrap=True, fontsize='small', verticalalignm
 plt.show()
 
 # Figure 2 | Diversity of land cover amongst wind parks in Ceara
-dataset_2 = pd.read_csv('./data/ceara_lc_overview.csv')
+dataset_2 = pd.read_csv('../output/ceara_lc_overview.csv')
 
 labels_2 = []
 colors_2 = []
@@ -54,7 +54,7 @@ plt.show()
 
 # Figure 3 | Was the highest estimated conversion of each wind park in commissioning year?
 
-dataset_3 = pd.read_csv('./data/ceara_agg_v2_lc_conversion.csv')
+dataset_3 = pd.read_csv('../output/ceara_agg_v2_lc_conversion.csv')
 figure_3 = dataset_3[dataset_3['share'] > 0]
 
 colors_3 = []

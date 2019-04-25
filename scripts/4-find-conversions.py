@@ -14,7 +14,7 @@ def reclassified_pixels(year):
     data.append(round(np.count_nonzero(converted) / pixels * 100, 2))
 
 
-parks = pd.read_csv('./data/ceara_wind_parks.csv')
+parks = pd.read_csv('../output/ceara_wind_parks.csv')
 
 column_names = ['wp_id', 'comm_year', 'share', 'no_classes', 'max_class',
                 '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017']
@@ -23,9 +23,9 @@ dataset = pd.DataFrame(columns=column_names)
 years = column_names[5:]
 years = list(map(int, years))
 
-for dirs, subdirs, files in os.walk('./data/ceara_agg_v2/'):
+for dirs, subdirs, files in os.walk('../output/ceara_agg_v2/'):
     for file in files:
-        wp_raster = rasterio.open('./data/ceara_agg_v2/' + file)
+        wp_raster = rasterio.open('../output/ceara_agg_v2/' + file)
         data = []
         file_name = file.replace('agg_v2_id_', '')
         wp_id = int(file_name.replace('.tif', ''))
@@ -60,4 +60,4 @@ for dirs, subdirs, files in os.walk('./data/ceara_agg_v2/'):
         dataset = dataset.append(add, ignore_index=True)
 
 
-dataset.to_csv('./data/ceara_agg_v2_lc_conversion.csv')
+dataset.to_csv('../output/ceara_agg_v2_lc_conversion.csv')
