@@ -8,7 +8,7 @@ def extract_data(land_class):
     data.append(np.count_nonzero(wp_raster.read(comm_band) * (wp_raster.read(comm_band) == land_class)))
 
 
-parks = pd.read_csv('./data/ceara_wind_parks.csv')
+parks = pd.read_csv('../output/ceara_wind_parks.csv')
 
 column_names = ['wp_id', 'comm_year', 'area', 'pixels',
            '3', '4', '5', '12', '15', '19', '21', '23', '24', '25', '31', '32', '33']
@@ -17,9 +17,9 @@ dataset = pd.DataFrame(columns=column_names)
 
 land_classes = [3, 4, 5, 12, 15, 19, 21, 23, 24, 25, 31, 32, 33]
 
-for dirs, subdirs, files in os.walk('./data/ceara/'):
+for dirs, subdirs, files in os.walk('../output/ceara/'):
     for file in files:
-        wp_raster = rasterio.open('./data/ceara/' + file)
+        wp_raster = rasterio.open('../output/ceara/' + file)
         data = []
 
         file_name = file.replace('id_', '')
@@ -43,4 +43,4 @@ for dirs, subdirs, files in os.walk('./data/ceara/'):
         add = dict(zip(column_names, data))
         dataset = dataset.append(add, ignore_index=True)
 
-dataset.to_csv('./data/ceara_wp_area_2017.csv')
+dataset.to_csv('../output/ceara_wp_area_2017.csv')
