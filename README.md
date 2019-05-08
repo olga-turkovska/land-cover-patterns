@@ -1,6 +1,7 @@
 ### Land cover patterns of wind generation infrastructure in Brazil
 
-This repository contains supporting scripts and data for EGU-2019 poster presentation
+This repository contains supporting scripts and data related to ongoing research on land cover patterns related to commissioned wind parks in Brazil.
+**v1.0** provides scripts and data used for EGU-2019 poster presentation
 __*Land cover patterns of wind generation infrastructure in Brazil*__
 
 by *Olga Turkovska*, *Johannes Schmidt*, *Katharina Gruber*, *Felix Nitsch*
