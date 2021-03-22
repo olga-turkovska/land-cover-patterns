@@ -53,7 +53,7 @@ ftp://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_mu
 
 Downloaded files need to be placed in 'input-data' folder.
 
-Acknowledgment
+__Acknowledgment__
 
 We gratefully acknowledge support from the European Research Council (“reFUEL” ERC2017-STG 758149).
 
